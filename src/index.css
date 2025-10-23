@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 25% 97%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    --primary: 220 70% 12%;
+    --primary-foreground: 210 100% 95%;
+
+    --secondary: 195 100% 50%;
+    --secondary-foreground: 220 70% 12%;
+
+    --muted: 220 20% 90%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 280 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 195 100% 50%;
+
+    --radius: 1rem;
+
+    /* Glassmorphism */
+    --glass-bg: 0 0% 100% / 0.1;
+    --glass-border: 0 0% 100% / 0.2;
+    --glass-shadow: 0 0% 0% / 0.1;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 70% 12%), hsl(260 70% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(195 100% 50%), hsl(280 70% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 70% 15%), hsl(260 60% 25%), hsl(195 100% 30%));
+
+    /* Shadows */
+    --shadow-glass: 0 8px 32px 0 hsla(220, 70%, 12%, 0.15);
+    --shadow-glow: 0 0 40px hsla(195, 100%, 50%, 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 70% 8%;
+    --foreground: 210 100% 95%;
+
+    --card: 220 60% 12%;
+    --card-foreground: 210 100% 95%;
+
+    --popover: 220 60% 12%;
+    --popover-foreground: 210 100% 95%;
+
+    --primary: 210 100% 95%;
+    --primary-foreground: 220 70% 12%;
+
+    --secondary: 195 100% 50%;
+    --secondary-foreground: 220 70% 12%;
+
+    --muted: 220 40% 20%;
+    --muted-foreground: 220 15% 65%;
+
+    --accent: 280 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 40% 22%;
+    --input: 220 40% 22%;
+    --ring: 195 100% 50%;
+
+    /* Glassmorphism - dark mode */
+    --glass-bg: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
+    --glass-shadow: 0 0% 0% / 0.3;
+
+    /* Gradients - dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(220 70% 12%), hsl(260 70% 20%));
+    --gradient-accent: linear-gradient(135deg, hsl(195 100% 40%), hsl(280 70% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 70% 10%), hsl(260 60% 15%), hsl(195 100% 20%));
+
+    /* Shadows - dark mode */
+    --shadow-glass: 0 8px 32px 0 hsla(0, 0%, 0%, 0.4);
+    --shadow-glow: 0 0 40px hsla(195, 100%, 50%, 0.5);
+  }
+  .theme {
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+    --animate-aurora: aurora 8s ease-in-out infinite alternate;
+    --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
+    --animate-meteor: meteor 5s linear infinite;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20;
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300 hover:bg-white/15 hover:border-white/30 hover:shadow-2xl hover:-translate-y-1;
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@theme inline {
+  @keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);
+    }
+  25% {
+    background-position: 50% 100%;
+    transform: rotate(5deg) scale(1.1);
+    }
+  50% {
+    background-position: 100% 50%;
+    transform: rotate(-3deg) scale(0.95);
+    }
+  75% {
+    background-position: 50% 0%;
+    transform: rotate(3deg) scale(1.05);
+    }
+  100% {
+    background-position: 0% 50%;
+    transform: rotate(-5deg) scale(0.9);
+    }
+  }
+  @keyframes blink-cursor {
+  0%, 49% {
+    opacity: 1;
+    }
+  50%, 100% {
+    opacity: 0;
+    }
+  }
+  @keyframes meteor {
+  0% {
+    transform: rotate(var(--angle)) translateX(0);
+    opacity: 1;
+    }
+  70% {
+    opacity: 1;
+    }
+  100% {
+    transform: rotate(var(--angle)) translateX(-500px);
+    opacity: 0;
+    }
+  }
+}

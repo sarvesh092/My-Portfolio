@@ -1,0 +1,173 @@
+{"projects":[
+
+        {
+          "title": "TESTMYSTACK",
+          "description":
+            "An interactive, full-stack quiz platform where users can test their knowledge across multiple tech domains, track progress, and export results — built for speed, scalability, and a great user experience.",
+          "features": [
+            "🔐 User Registration & Login powered by Auth.js with secure session handling and JWT-based access control.",
+            "🧠 Take quizzes and tests on various topics including Next.js, React, TypeScript, JavaScript, SQL, and more — designed for both beginners and professionals.",
+            "📊 Instant score calculation and topic-wise analytics to help users identify their strong and weak areas.",
+            "📁 Option to export test results as PDF or JSON for future reference.",
+            "⚙️ Built with Next.js, TypeScript, MongoDB, and Tailwind CSS for high performance and scalability, with Shadcn UI components ensuring consistent design.",
+            "🚀 Optimized with SWR for state synchronization and Redis caching, resulting in faster load times and smooth concurrent usage."
+          ],
+          "techStack": [
+            "Next.js",
+            "TypeScript",
+            "MongoDB",
+            "Tailwind CSS",
+            "Shadcn",
+            "Auth.js",
+            "Redis",
+            "SWR",
+            "Zod"
+          ],
+          "github": "https://github.com/sarvesh092/TestMyStack/",
+          "Link": "https://test-my-stack.vercel.app/"
+        },
+        {
+          "title": "AI SUMMARY ANALYZER",
+          "description":
+            "An AI-powered assistant that helps users extract insights from complex documents or questions. It allows direct queries or file uploads and delivers concise summaries or answers instantly using advanced LLMs.",
+          "features": [
+            "💡 Users can directly ask AI-related questions (on ML, Data Science, Databases, LLMs, etc.) or upload PDFs/Markdown files for intelligent summarization and content-based Q&A.",
+            "📄 The app reads and processes uploaded documents to provide quick answers and summaries, saving users time from reading lengthy technical papers or documentation.",
+            "📦 Google Cloud Storage is used for secure file uploads, retrieval, and data persistence.",
+            "🔍 Implemented Pinecone as a vector database to power semantic search and context-aware query matching.",
+            "⚙️ Backend designed as a microservices pipeline (Python + Node.js) for document parsing, chunking, embedding generation, and response delivery."
+        ],
+          "techStack": [
+            "Next.js",
+            "Node.js",
+            "Python",
+            "Tailwind CSS",
+            "OpenAI API",
+            "Pinecone",
+            "Google Cloud Storage",
+            "Docker",
+            "BullMQ"
+          ],
+          "github": "https://github.com/sarvesh092/Ai-Summery-Analyzer",
+          "Link": "#"
+        },
+        {
+          "title": "SecureFlow",
+          "description":
+            "A reusable authentication system for MERN applications, providing secure and production-ready auth flows with modular, extensible code.",
+          "features": [
+            "🔐 Includes complete authentication features — signup, login, logout, password reset (via email), and password update after login.",
+            "✉️ Integrated Mailtrap for email-based password resets and notifications during account recovery.",
+            "🧱 Modular code architecture with Express middleware for protected routes and scalable backend structure.",
+            "⚛️ React frontend integrated with Axios for seamless communication with backend APIs.",
+            "🧩 Designed as a plug-and-play solution for any MERN application, eliminating the need to rebuild authentication logic."
+          ],
+          "techStack": [
+            "React.js",
+            "css",
+            "javascript",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "JWT",
+            "bcrypt",
+            "Axios",
+            "Mailtrap"
+          ],
+          "github": "https://github.com/sarvesh092/Secure-Flow",
+          "Link": "#"
+        }
+      
+],
+"experiences": [
+    {
+      "title": " Associate Software Engineer - Full Stack Developer",
+      "company": "SLK Software",
+      "period": "2023 - Present",
+      "location": "Bangalore, India",
+      "description":
+        "Leading development of scalable web applications. Implemented real-time features and optimized performance.",
+      "achievements": [
+        "Led development of multiple end-to-end full stack applications, managing both frontend and backend workflows, ensuring high scalability and robust architecture. ",
+        "Built interactive dashboards, feature-engineering modules, and ML pipeline integrations, reducing model-building time by 70%.",
+        "Built multiple responsive and reusable components across various projects using libraries such as Material UI, PrimeReact, Shadcn, and others. Focused on reducing code duplication, enhancing maintainability, and improving overall performance through Lighthouse and Chrome DevTools optimizations.",
+        "Engineered REST APIs, WebSockets, and Redis caching for high-performance data exchange (87% faster API responses).",
+        "Optimized deployment pipelines using Docker, Azure DevOps, and Nginx, reducing deployment time by 40% and cloud costs by 65%.",
+        "Designed real-time analytics dashboards and visualizations using Nivo Charts, Chart.js, and React Flow, improving decision efficiency by 60%.",
+        "Collaborated with cross-functional teams (ML, DevOps, and Design) in Agile sprints, mentoring peers, conducting code reviews, and communicating technical progress to stakeholders."
+      ]
+    },
+    {
+      "title": "Software Intern",
+      "company": "Compsoft Technologies",
+      "period": "August 2022 - September 2022",
+      "location": "Bangalore, India",
+      "description":
+        "Developed a responsive resume builder web app using MERN stack with dynamic templates, reusable UI components, and real-time preview optimization.",
+      "achievements": [
+        "Developed a resume template builder website using HTML, CSS, JavaScript, React, and Node.js, enabling users to create and download personalized resume templates dynamically.",
+        "Built a real-time preview feature using React state management and optimized rendering logic, improving UI responsiveness by 45%.",
+        "Designed reusable and responsive UI components with modular architecture, reducing code redundancy.",
+        "Integrated REST APIs for template management and user customization, enhance scalability and performance."
+      ]
+    }
+  ],
+  
+  "skillsData": {
+    "languages": [
+       "JavaScript",
+      "TypeScript",
+      "Python",
+      "SQL"
+    ],
+    "frontend": [
+      "React",
+      "Next.js",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Zustand",
+      "React Query",
+      "Material UI",
+      "Shadcn"
+    ],
+    "backend": [
+      "Node.js",
+      "Express.js",
+      "RESTful APIs",
+      "Microservices",
+      "JWT & OAuth",
+      "WebSockets",
+      "Redis Caching"
+    ],
+    "database": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Prisma ORM",
+      "Redis"
+    ],
+    "testing": [
+      "Jest",
+      "React Testing Library",
+      "Postman",
+      "Chrome DevTools"
+    ],
+    "devops": [
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "Azure",
+      "Nginx",
+      "CI/CD Pipelines"
+    ],
+    "tools": [
+      "VS Code",
+      "GitHub",
+      "Google Colab",
+      "Postman",
+      "Figma"
+    ]
+  }
+}

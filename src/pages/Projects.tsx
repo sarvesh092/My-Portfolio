@@ -111,16 +111,17 @@ const Projects = () => {
                 </div>
 
                 <div className="mt-auto pt-4 border-t border-border/30 flex items-center justify-between">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="gap-2 text-sm font-medium group/btn"
-                    onClick={() => window.open(project.github, "_blank")}
-                  >
-                    <GithubIcon className="h-4 w-4 transition-transform group-hover/btn:scale-110" />
-                    <span>View Code</span>
-                  </Button>
-
+                  {project.github !== "#" && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="gap-2 text-sm font-medium group/btn"
+                      onClick={() => window.open(project.github, "_blank")}
+                    >
+                      <GithubIcon className="h-4 w-4 transition-transform group-hover/btn:scale-110" />
+                      <span>View Code</span>
+                    </Button>
+                  )}
                   {project.Link !== "#" && (
                     <Button
                       variant="ghost"
@@ -128,7 +129,7 @@ const Projects = () => {
                       className="gap-2 text-sm font-medium group/link"
                       onClick={() => window.open(project.Link, "_blank")}
                     >
-                      <span>Live Demo</span>
+                      <span>View Project</span>
                       <ExternalLink className="h-4 w-4 transition-transform group-hover/link:translate-x-0.5" />
                     </Button>
                   )}

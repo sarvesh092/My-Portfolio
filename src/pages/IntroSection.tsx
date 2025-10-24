@@ -44,7 +44,7 @@ const IntroSection = () => {
               />
             </motion.h1>
 
-            <motion.div 
+            <motion.div
               className="space-y-4 mb-8 max-w-2xl"
               initial="hidden"
               animate="visible"
@@ -54,48 +54,69 @@ const IntroSection = () => {
                   opacity: 1,
                   transition: {
                     staggerChildren: 0.1,
-                    delayChildren: 0.3
-                  }
-                }
+                    delayChildren: 0.3,
+                  },
+                },
               }}
             >
-              <motion.p 
+              <motion.p
                 className="text-lg md:text-xl text-muted-foreground leading-relaxed"
                 variants={{
                   hidden: { opacity: 0, y: 10 },
-                  visible: { 
-                    opacity: 1, 
+                  visible: {
+                    opacity: 1,
                     y: 0,
-                    transition: { duration: 0.5 }
-                  }
+                    transition: { duration: 0.5 },
+                  },
                 }}
               >
-                I craft <span className="text-primary font-medium">fast</span>, <span className="text-primary font-medium">intuitive</span> web applications 
-                with a focus on <span className="text-foreground font-medium">real-time systems</span> and <span className="text-foreground font-medium">AI-powered</span> automation.
+                I craft <span className="text-primary font-medium">fast</span>,{" "}
+                <span className="text-primary font-medium">intuitive</span> web
+                applications with a focus on{" "}
+                <span className="text-foreground font-medium">
+                  real-time systems
+                </span>{" "}
+                and{" "}
+                <span className="text-foreground font-medium">AI-powered</span>{" "}
+                automation.
               </motion.p>
 
-              <motion.div 
+              <motion.div
                 className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg border-l-4 border-primary/50"
                 variants={{
                   hidden: { opacity: 0, x: -10 },
-                  visible: { 
-                    opacity: 1, 
+                  visible: {
+                    opacity: 1,
                     x: 0,
-                    transition: { 
+                    transition: {
                       duration: 0.5,
-                      delay: 0.2
-                    }
-                  }
+                      delay: 0.2,
+                    },
+                  },
                 }}
               >
                 <div className="mt-0.5">
-                  <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <svg
+                    className="w-8 h-8 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
                   </svg>
                 </div>
                 <div>
-                  <p className="text-foreground font-medium">Currently Working at SLK Software</p>
-                  <p className="text-sm text-muted-foreground">Associate Software Engineer (Full Stack Developer)</p>
+                  <p className="text-foreground font-medium">
+                    Currently Working at SLK Software
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Associate Software Engineer (Full Stack Developer)
+                  </p>
                 </div>
               </motion.div>
             </motion.div>
@@ -122,12 +143,10 @@ const IntroSection = () => {
               <Button
                 size="lg"
                 className="gap-2 px-6 h-12 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground"
-                onClick={() =>
-                  window.open("src/Data/Sarvesh_Kashyap.pdf", "_blank")
-                }
+                onClick={() => window.open("/Sarvesh_Kashyap.pdf", "_blank")}
               >
                 <Download className="h-4 w-4" />
-                Download CV
+                Download Resume
               </Button>
             </motion.div>
 

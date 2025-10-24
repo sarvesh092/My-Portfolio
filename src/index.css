@@ -202,5 +202,5 @@
     transform: rotate(var(--angle)) translateX(-500px);
     opacity: 0;
     }
-  }
+  } 
 }

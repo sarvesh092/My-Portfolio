@@ -10,7 +10,7 @@ import { AuroraText } from "@/components/ui/aurora-text";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-4 md:px-8 bg-background">
+    <section id="projects" className="py-20 px-4 md:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,12 +42,12 @@ const Projects = () => {
               className="group relative h-full flex flex-col overflow-hidden rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
             >
               {/* Image with overlay */}
-              <div className="relative aspect-video overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5"
                   initial={{ opacity: 0.9 }}
-                  whileHover={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6 }}
+                  whileHover={{ opacity: 1, scale: 1.02 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                   <img
                     src={
@@ -58,7 +58,7 @@ const Projects = () => {
                         : AiSummary
                     }
                     alt={project.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover object-center transition-all duration-700 group-hover:scale-110"
                   />
                 </motion.div>
 

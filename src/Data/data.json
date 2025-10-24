@@ -3,13 +3,12 @@
         {
           "title": "TESTMYSTACK",
           "description":
-            "An interactive, full-stack quiz platform where users can test their knowledge across multiple tech domains, track progress, and export results — built for speed, scalability, and a great user experience.",
+            "An interactive, full-stack quiz platform where users can test their knowledge across multiple tech domains, track progress, and export results.",
           "features": [
             "🔐 User Registration & Login powered by Auth.js with secure session handling and JWT-based access control.",
             "🧠 Take quizzes and tests on various topics including Next.js, React, TypeScript, JavaScript, SQL, and more — designed for both beginners and professionals.",
             "📊 Instant score calculation and topic-wise analytics to help users identify their strong and weak areas.",
             "📁 Option to export test results as PDF or JSON for future reference.",
-            "⚙️ Built with Next.js, TypeScript, MongoDB, and Tailwind CSS for high performance and scalability, with Shadcn UI components ensuring consistent design.",
             "🚀 Optimized with SWR for state synchronization and Redis caching, resulting in faster load times and smooth concurrent usage."
           ],
           "techStack": [
@@ -29,19 +28,16 @@
         {
           "title": "AI SUMMARY ANALYZER",
           "description":
-            "An AI-powered assistant that helps users extract insights from complex documents or questions. It allows direct queries or file uploads and delivers concise summaries or answers instantly using advanced LLMs.",
+            "An AI-powered assistant that helps users extract insights from complex documents or questions.",
           "features": [
             "💡 Users can directly ask AI-related questions (on ML, Data Science, Databases, LLMs, etc.) or upload PDFs/Markdown files for intelligent summarization and content-based Q&A.",
             "📄 The app reads and processes uploaded documents to provide quick answers and summaries, saving users time from reading lengthy technical papers or documentation.",
-            "📦 Google Cloud Storage is used for secure file uploads, retrieval, and data persistence.",
             "🔍 Implemented Pinecone as a vector database to power semantic search and context-aware query matching.",
             "⚙️ Backend designed as a microservices pipeline (Python + Node.js) for document parsing, chunking, embedding generation, and response delivery."
         ],
           "techStack": [
             "Next.js",
-            "Node.js",
             "Python",
-            "Tailwind CSS",
             "OpenAI API",
             "Pinecone",
             "Google Cloud Storage",
@@ -59,13 +55,11 @@
             "🔐 Includes complete authentication features — signup, login, logout, password reset (via email), and password update after login.",
             "✉️ Integrated Mailtrap for email-based password resets and notifications during account recovery.",
             "🧱 Modular code architecture with Express middleware for protected routes and scalable backend structure.",
-            "⚛️ React frontend integrated with Axios for seamless communication with backend APIs.",
             "🧩 Designed as a plug-and-play solution for any MERN application, eliminating the need to rebuild authentication logic."
           ],
           "techStack": [
             "React.js",
             "css",
-            "javascript",
             "Node.js",
             "Express.js",
             "MongoDB",
@@ -130,7 +124,8 @@
       "Zustand",
       "React Query",
       "Material UI",
-      "Shadcn"
+      "Shadcn",
+      "Figma"
     ],
     "backend": [
       "Node.js",
@@ -160,14 +155,8 @@
       "Git",
       "Azure",
       "Nginx",
-      "CI/CD Pipelines"
-    ],
-    "tools": [
-      "VS Code",
-      "GitHub",
-      "Google Colab",
-      "Postman",
-      "Figma"
+      "CI/CD Pipelines",
+      "GitHub"
     ]
   }
 }

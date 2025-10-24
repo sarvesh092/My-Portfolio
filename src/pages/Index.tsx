@@ -4,15 +4,17 @@ import Projects from "@/pages/Projects";
 import Skills from "@/pages/Skills";
 import Experience from "@/pages/Experience";
 import Contact from "@/pages/Contact";
+import AboutMe from "@/pages/AboutMe";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
       <IntroSection />
-      <Projects />
       <Skills />
+      <Projects />
       <Experience />
+      <AboutMe />
       <Contact />
     </div>
   );

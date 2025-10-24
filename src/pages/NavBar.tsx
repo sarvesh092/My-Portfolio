@@ -18,6 +18,17 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      const isDarkMode = savedTheme === 'dark';
+      setIsDark(isDarkMode);
+    } else {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setIsDark(prefersDark);
+    }
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -31,6 +42,7 @@ const Navigation = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
   }, [isDark]);
 
   return (
@@ -42,12 +54,12 @@ const Navigation = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 sm:h-18">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xl font-bold"
+            className="text-lg sm:text-xl font-bold"
           >
             <span className="text-gradient">SK</span>
           </motion.div>
@@ -68,7 +80,7 @@ const Navigation = () => {
             ))}
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 sm:gap-4">
             <Button
               variant="ghost"
               size="icon"
@@ -108,13 +120,13 @@ const Navigation = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden glass border-t border-border"
           >
-            <div className="px-4 py-6 space-y-4">
+            <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
               {navItems.map((item) => (
                 <a
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-sm font-medium text-foreground/80 hover:text-secondary transition-colors py-2"
+                  className="block text-sm font-medium text-foreground/80 hover:text-secondary transition-colors py-2 sm:py-3"
                 >
                   {item.label}
                 </a>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code, Cpu, Rocket, Users, Lightbulb } from "lucide-react";
+import { CalendarDays, Cpu, Rocket, Users, Lightbulb } from "lucide-react";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { MorphingText } from "@/components/ui/morphing-text";
 
@@ -8,7 +8,7 @@ const AboutMe = () => {
     {
       value: "2+",
       label: "Years Experience",
-      icon: <Code className="h-6 w-6" />,
+      icon: <CalendarDays className="h-6 w-6" />,
     },
     {
       value: "10+",

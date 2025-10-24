@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 const navItems = [
   { label: "Home", href: "#home" },
-  { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
   { label: "About Me", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -16,6 +16,35 @@ const Navigation = () => {
   const [isDark, setIsDark] = useState(true);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const scrollToSection = (href: string, navbarHeight: number = 80) => {
+    const element = document.querySelector(href) as HTMLElement | null;
+  
+    if (!element) {
+      console.warn(`Element with selector "${href}" not found`);
+      return;
+    }
+  
+    console.log(`Scrolling to ${href}`);
+  
+    const scrollWithOffset = () => {
+      const rect = element.getBoundingClientRect();
+      const scrollPosition = window.pageYOffset + rect.top - navbarHeight;
+  
+      window.scrollTo({
+        top: Math.max(0, scrollPosition),
+        behavior: 'smooth'
+      });
+    };
+  
+    if ('scrollBehavior' in document.documentElement.style) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(scrollWithOffset, 300); 
+    } else {
+      scrollWithOffset();
+    }
+  };
+  
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -59,7 +88,8 @@ const Navigation = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-lg sm:text-xl font-bold"
+            className="text-lg sm:text-xl font-bold cursor-pointer"
+            onClick={() => scrollToSection('#home')}
           >
             <span className="text-gradient">SK</span>
           </motion.div>
@@ -69,10 +99,14 @@ const Navigation = () => {
               <motion.a
                 key={item.href}
                 href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.href);
+                }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
-                className="text-sm font-medium text-foreground/80 hover:text-secondary transition-colors relative group"
+                className="text-sm font-medium text-foreground/80 hover:text-secondary transition-colors relative group cursor-pointer"
               >
                 {item.label}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300" />
@@ -93,8 +127,6 @@ const Navigation = () => {
                 <Moon className="w-5 h-5 text-secondary" />
               )}
             </Button>
-
-            {/* Mobile Menu Button */}
             <Button
               variant="ghost"
               size="icon"
@@ -122,14 +154,20 @@ const Navigation = () => {
           >
             <div className="px-4 py-4 sm:py-6 space-y-3 sm:space-y-4">
               {navItems.map((item) => (
-                <a
+                <button
                   key={item.href}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="block text-sm font-medium text-foreground/80 hover:text-secondary transition-colors py-2 sm:py-3"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();  
+                    setIsMobileMenuOpen(false);
+                    setTimeout(() => {
+                      scrollToSection(item.href);
+                    }, 200);
+                  }}
+                  className="block w-full text-left text-sm font-medium text-foreground/80 hover:text-secondary transition-colors py-2 sm:py-3 cursor-pointer"
                 >
                   {item.label}
-                </a>
+                </button>
               ))}
             </div>
           </motion.div>

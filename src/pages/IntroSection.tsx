@@ -70,15 +70,22 @@ const IntroSection = () => {
                   },
                 }}
               >
-                I craft <span className="text-primary font-medium">fast</span>,{" "}
-                <span className="text-primary font-medium">intuitive</span> web
+                Full Stack Developer building{" "}
+                <span className="text-primary font-medium">scalable</span>,{" "}
+                <span className="text-primary font-medium">end-to-end</span> web
                 applications with a focus on{" "}
                 <span className="text-foreground font-medium">
-                  real-time systems
-                </span>{" "}
-                and{" "}
-                <span className="text-foreground font-medium">AI-powered</span>{" "}
-                automation.
+                  real-time architecture
+                </span>
+                ,{" "}
+                <span className="text-foreground font-medium">
+                  AI integration
+                </span>
+                , and{" "}
+                <span className="text-foreground font-medium">
+                  modern cloud technologies
+                </span>
+                .
               </motion.p>
 
               <motion.div

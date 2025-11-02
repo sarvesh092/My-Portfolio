@@ -55,10 +55,6 @@ const AboutMe = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Know Me <AuroraText>Better</AuroraText>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            A problem solver at heart, passionate about building intelligent,
-            scalable, and user-focused web experiences.
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -67,25 +63,35 @@ const AboutMe = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="space-y-0 text-left"
+            className="text-left"
           >
             <MorphingText
               className="!text-xl sm:!text-2xl md:!text-3xl text-left flex !justify-start !items-start !h-12"
-              texts={["I'm Sarvesh Kashyap", "A Software Developer"]}
+              texts={["I'm Sarvesh Kashyap", "A Full Stack Developer"]}
             />
 
-            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              With over 2 years of experience in modern web development, I
-              specialize in building full-stack applications that combine
-              real-time interactivity, automation, and AI capabilities. I love
-              transforming ideas into scalable digital products that deliver
-              real user impact.
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6">
+              with around 2 years of experience specializing in React, Next.js,
+              Node.js, and Express.js. I focus on building AI-driven, real-time,
+              and scalable web applications that combine robust backend systems
+              with seamless, high-performing user interfaces.
             </p>
+
+            <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6">
+              My technical expertise spans JavaScript, TypeScript, and Python,
+              along with modern frameworks like React, Next.js, Express, and
+              Prisma ORM. I work confidently with PostgreSQL, MongoDB, and
+              Redis, and integrate Docker, Kubernetes, and CI/CD pipelines to
+              ensure smooth and reliable deployments across cloud platforms like
+              Azure and AWS.
+            </p>
+            
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              I'm deeply focused on performance, clean architecture, and user
-              experience. Whether it's creating seamless frontends or
-              engineering efficient backend systems, I bring ownership,
-              creativity, and problem-solving to every project I work on.
+              I'm driven by a strong focus on creating intelligent,
+              performance-optimized applications that deliver measurable impact.
+              I believe in writing clean, maintainable code, designing scalable
+              architectures, and continuously exploring new technologies to
+              enhance user experience and development efficiency.
             </p>
 
             <div className="pt-4">

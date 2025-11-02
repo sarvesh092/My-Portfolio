@@ -4,11 +4,12 @@
       "title": "TESTMYSTACK",
       "description": "An interactive, full-stack quiz platform where users can test their knowledge across multiple tech domains, track progress, and export results.",
       "features": [
-        "🔐 User Registration & Login powered by Auth.js with secure session handling and JWT-based access control.",
-        "🧠 Take quizzes and tests on various topics including Next.js, React, TypeScript, JavaScript, SQL, and more — designed for both beginners and professionals.",
-        "📊 Instant score calculation and topic-wise analytics to help users identify their strong and weak areas.",
-        "📁 Option to export test results as PDF or JSON for future reference.",
-        "🚀 Optimized with SWR for state synchronization and Redis caching, resulting in faster load times and smooth concurrent usage."
+        "Developed a robust assessment platform using Next.js, TypeScript, and MongoDB to unify multiple quiz categories into one centralized system.",
+        "Implemented Auth.js and JWT-based authentication for secure user sessions, login, and profile management.",
+        "Designed interactive dashboards with charts and analytics to display real-time performance metrics and topic-wise insights.",
+        "Built modular REST APIs integrated with SWR for fast data synchronization and smooth quiz creation, editing, and analysis.",
+        "Enhanced usability through save/resume features, light/dark mode support, and responsive layouts optimized for all devices.",
+        "Engineered 10+ reusable components using Tailwind CSS and Shadcn to ensure consistency, scalability, and maintainability across the platform."
       ],
       "techStack": [
         "Next.js",
@@ -20,18 +21,18 @@
         "SWR",
         "Zod"
       ],
-      "github": "#",
+      "github": "https://github.com/sarvesh092/TestMyStack",
       "Link": "https://test-my-stack.vercel.app/"
     },
     {
       "title": "AI SUMMARY ANALYZER",
       "description": "An AI-powered assistant that helps users extract insights from complex documents or questions.",
       "features": [
-        "🧠 Architected an AI-powered summarization engine using Next.js, Node.js, LangChain, and OpenAI LLMs for real-time document parsing and smart summary generation — reducing manual review time by 60%.",
-        "⚡ Enabled intelligent summarization and context-aware Q&A across multiple document formats (PDF, DOCX, Markdown), enhancing productivity and accuracy.",
-        "🔍 Optimized semantic search using pgvector embeddings with LangChain retrievers, achieving 68% higher accuracy and 55% faster response times.",
-        "⚙️ Implemented BullMQ-based background job queues and Dockerized microservices for scalable document parsing, embedding generation, and cloud deployment.",
-        "☁️ Designed the backend to seamlessly integrate with cloud infrastructure, ensuring reliability, high throughput, and easy scalability for AI-driven workloads."
+        "Architected an AI-powered summarization engine using Next.js, Node.js, LangChain, and OpenAI LLMs for real-time document parsing and smart summary generation — reducing manual review time by 60%.",
+        "Enabled intelligent summarization and context-aware Q&A across multiple document formats (PDF, DOCX, Markdown), enhancing productivity and accuracy.",
+        "Optimized semantic search using pgvector embeddings with LangChain retrievers, achieving 68% higher accuracy and 55% faster response times.",
+        "Implemented BullMQ-based background job queues and Dockerized microservices for scalable document parsing, embedding generation, and cloud deployment.",
+        "Designed the backend to seamlessly integrate with cloud infrastructure, ensuring reliability, high throughput, and easy scalability for AI-driven workloads."
       ],
       "techStack": [
         "Next.js",
@@ -50,10 +51,11 @@
       "title": "SecureFlow",
       "description": "A reusable authentication system for MERN applications, providing secure and production-ready auth flows with modular, extensible code.",
       "features": [
-        "🔐 Includes complete authentication features — signup, login, logout, password reset (via email), and password update after login.",
-        "✉️ Integrated Mailtrap for email-based password resets and notifications during account recovery.",
-        "🧱 Modular code architecture with Express middleware for protected routes and scalable backend structure.",
-        "🧩 Designed as a plug-and-play solution for any MERN application, eliminating the need to rebuild authentication logic."
+        "Developed a reusable authentication solution using React, Node.js, Express, and MongoDB to eliminate repetitive setup for new projects.",
+        "Secured APIs using JWT authentication, HTTP-only cookies, and Express middleware to protect routes and user data.",
+        "Integrated Mailtrap for verification and password recovery workflows, improving account management and user trust.",
+        "Built a clean, React-based frontend with Axios for seamless communication and efficient state handling.",
+        "Reduced setup time by 70% through modular code architecture, making authentication easy to integrate and extend for any full-stack or SaaS project."
       ],
       "techStack": [
         "React.js",
@@ -70,32 +72,33 @@
   ],
   "experiences": [
     {
-      "title": " Associate Software Engineer - Full Stack Developer",
+      "title": "Associate Software Engineer — Full Stack Developer",
       "company": "SLK Software",
       "period": "2023 - Present",
       "location": "Bangalore, India",
-      "description": "Leading development of scalable web applications. Implemented real-time features and optimized performance.",
+      "description": "Developing scalable, AI/ML-driven web applications with a strong focus on performance, automation, and real-time data visualization.",
       "achievements": [
-        "Led development of multiple end-to-end full stack applications, managing both frontend and backend workflows, ensuring high scalability and robust architecture. ",
-        "Built interactive dashboards, feature-engineering modules, and ML pipeline integrations, reducing model-building time by 70%.",
-        "Built multiple responsive and reusable components across various projects using libraries such as Material UI, PrimeReact, Shadcn, and others. Focused on reducing code duplication, enhancing maintainability, and improving overall performance through Lighthouse and Chrome DevTools optimizations.",
-        "Engineered REST APIs, WebSockets, and Redis caching for high-performance data exchange (87% faster API responses).",
-        "Optimized deployment pipelines using Docker, Azure DevOps, and Nginx, reducing deployment time by 40% and cloud costs by 65%.",
-        "Designed real-time analytics dashboards and visualizations using Nivo Charts, Chart.js, and React Flow, improving decision efficiency by 60%.",
-        "Collaborated with cross-functional teams (ML, DevOps, and Design) in Agile sprints, mentoring peers, conducting code reviews, and communicating technical progress to stakeholders."
+        "Architected a no-code AutoML platform that automated data ingestion, feature engineering, and model comparison, significantly reducing manual workload and accelerating insight generation.",
+        "Built and optimized real-time dashboards, drag-and-drop data upload flows, and visual diagnostic tools using React, Next.js, and Nivo Charts to enhance user analytics and interactivity.",
+        "Developed modular, reusable frontend components with React, TypeScript, Redux Toolkit, Tailwind, and Shadcn, improving code maintainability and UI consistency across projects.",
+        "Engineered REST APIs, WebSocket-based event systems, and Redis caching for real-time communication and high-performance data synchronization.",
+        "Enhanced large dataset rendering through memoization, lazy loading, and virtualization, reducing load time by 74%.",
+        "Streamlined Docker and Azure-based CI/CD pipelines with Nginx configuration, reducing deployment time by 40% and simplifying release workflows.",
+        "Implemented secure authentication, role-based access control, and microservice communication using JWT, Redis, and AWS Lambda for scalable backend workflows.",
+        "Collaborated with ML, DevOps, and UI/UX teams in Agile sprints to deliver production-ready features and improve release reliability."
       ]
     },
     {
-      "title": "Software Intern",
+      "title": "Full Stack Web Developer Intern",
       "company": "Compsoft Technologies",
-      "period": "August 2022 - September 2022",
+      "period": "August 2022 - October 2022",
       "location": "Bangalore, India",
-      "description": "Developed a responsive resume builder web app using MERN stack with dynamic templates, reusable UI components, and real-time preview optimization.",
+      "description": "Designed and developed a responsive Resume Builder web application using the MERN stack with dynamic templates, real-time previews, and reusable UI components.",
       "achievements": [
-        "Developed a resume template builder website using HTML, CSS, JavaScript, React, and Node.js, enabling users to create and download personalized resume templates dynamically.",
-        "Built a real-time preview feature using React state management and optimized rendering logic, improving UI responsiveness by 45%.",
-        "Designed reusable and responsive UI components with modular architecture, reducing code redundancy.",
-        "Integrated REST APIs for template management and user customization, enhance scalability and performance."
+        "Built an online resume creation platform using React, Node.js, Express, and MySQL, enabling users to generate professional resumes through dynamic templates and instant previews.",
+        "Implemented over 20 customizable themes with drag-and-drop personalization, enhancing user engagement and improving creation speed by 40%.",
+        "Developed modular REST APIs for authentication and template management, ensuring scalable performance and smooth data flow across the app.",
+        "Designed responsive, mobile-friendly UI layouts optimized for cross-device rendering using React and Tailwind CSS."
       ]
     }
   ],

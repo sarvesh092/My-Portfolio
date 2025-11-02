@@ -25,8 +25,6 @@ const Navigation = () => {
       return;
     }
   
-    console.log(`Scrolling to ${href}`);
-  
     const scrollWithOffset = () => {
       const rect = element.getBoundingClientRect();
       const scrollPosition = window.pageYOffset + rect.top - navbarHeight;
@@ -83,7 +81,7 @@ const Navigation = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-18">
+        <div className="flex items-center justify-between h-14 sm:h-18">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -91,7 +89,7 @@ const Navigation = () => {
             className="text-lg sm:text-xl font-bold cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
-            <span className="text-gradient">SK</span>
+            <span className="text-gradient">Sarvesh</span>
           </motion.div>
 
           <div className="hidden md:flex items-center gap-8">

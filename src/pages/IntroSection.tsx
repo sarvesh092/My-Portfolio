@@ -124,6 +124,9 @@ const IntroSection = () => {
                   <p className="text-sm text-muted-foreground">
                     Associate Software Engineer (Full Stack Developer)
                   </p>
+                  <p className="text-sm text-muted-foreground">
+                  Oct 2023 - Present
+                  </p>
                 </div>
               </motion.div>
             </motion.div>

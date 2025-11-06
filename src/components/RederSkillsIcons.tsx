@@ -29,7 +29,8 @@ import PostmanIcon from "@/assets/icons/postman.svg?react";
 import GitHubIcon from "@/assets/icons/github.svg?react";
 import DockerIcon from "@/assets/icons/docker.svg?react";
 import KubernetesIcon from "@/assets/icons/kubernetes.svg?react";
-import NginxIcon from "@/assets/icons/nginx.svg?react";
+import AwsIcon from "@/assets/icons/aws-lambda.svg?react";
+import TanStackIcon from "@/assets/icons/tanstack.svg?react";
 
 const SkillIcons = ({ name, index }: { name: string; index: number }) => {
   const getSkillIcon = (skillName: string) => {
@@ -52,11 +53,7 @@ const SkillIcons = ({ name, index }: { name: string; index: number }) => {
           Z
         </div>
       ),
-      "React Query": (
-        <div className="h-10 w-10 text-red-500 flex items-center justify-center font-bold text-lg">
-          RQ
-        </div>
-      ),
+      "TanStack Query": <TanStackIcon className="h-10 w-10" />,
       "Material UI": <MaterialUIIcon className="h-10 w-10" />,
       Figma: <FigmaIcon className="h-10 w-10" />,
       Shadcn: (
@@ -96,7 +93,7 @@ const SkillIcons = ({ name, index }: { name: string; index: number }) => {
       Kubernetes: <KubernetesIcon className="h-10 w-10" />,
       Azure: <AzureIcon className="h-10 w-10" />,
       Git: <GitIcon className="h-10 w-10" />,
-      Nginx: <NginxIcon className="h-10 w-10" />,
+      "AWS Lambda": <AwsIcon className="h-10 w-10" />,
       "CI/CD Pipelines": <CiCdIcon className="h-10 w-10" />,
       GitHub: <GitHubIcon className="h-10 w-10" />,
 

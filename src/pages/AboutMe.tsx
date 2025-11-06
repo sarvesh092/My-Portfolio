@@ -1,7 +1,21 @@
 import { motion } from "framer-motion";
-import { CalendarDays, Cpu, Rocket, Users, Lightbulb } from "lucide-react";
+import {
+  CalendarDays,
+  Cpu,
+  Rocket,
+  Users,
+  Lightbulb,
+  Trophy,
+  Sparkles,
+  Award,
+  ExternalLink,
+} from "lucide-react";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { MorphingText } from "@/components/ui/morphing-text";
+
+const handleViewCertificate = (certificateUrl: string) => {
+  window.open(certificateUrl, "_blank", "noopener,noreferrer");
+};
 
 const AboutMe = () => {
   const stats = [
@@ -12,18 +26,13 @@ const AboutMe = () => {
     },
     {
       value: "10+",
-      label: "Real Projects Built",
+      label: "Real Projects Delivered",
       icon: <Cpu className="h-6 w-6" />,
     },
     {
-      value: "12+",
-      label: "Technologies Mastered",
+      value: "20+",
+      label: "Production Features Shipped",
       icon: <Rocket className="h-6 w-6" />,
-    },
-    {
-      value: "100%",
-      label: "Passion & Ownership",
-      icon: <Lightbulb className="h-6 w-6" />,
     },
   ];
 
@@ -55,6 +64,9 @@ const AboutMe = () => {
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-foreground">
             Know Me <AuroraText>Better</AuroraText>
           </h2>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+            I like building systems that scale and products people actually use.
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -71,46 +83,117 @@ const AboutMe = () => {
             />
 
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6">
-              with around 2 years of experience specializing in React, Next.js,
-              Node.js, and Express.js. I focus on building AI-driven, real-time,
-              and scalable web applications that combine robust backend systems
-              with seamless, high-performing user interfaces.
+              With 2+ years of experience, I focus on building scalable,
+              real-time, and AI-driven web platforms using Next.js, Node.js, and
+              cloud-native architectures. I love solving engineering problems
+              that connect clean UI/UX with strong system design.
             </p>
 
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6">
-              My technical expertise spans JavaScript, TypeScript, and Python,
-              along with modern frameworks like React, Next.js, Express, and
-              Prisma ORM. I work confidently with PostgreSQL, MongoDB, and
-              Redis, and integrate Docker, Kubernetes, and CI/CD pipelines to
-              ensure smooth and reliable deployments across cloud platforms like
-              Azure and AWS.
+              I work across JavaScript, TypeScript, and Python ecosystems, and
+              build with modern tooling like React, Next.js, Express,
+              PostgreSQL, Redis, and Prisma. On the DevOps side, I use Docker,
+              Kubernetes, CI/CD pipelines, and cloud platforms including Azure
+              and AWS for reliable deployments.
             </p>
-            
+
             <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-              I'm driven by a strong focus on creating intelligent,
-              performance-optimized applications that deliver measurable impact.
-              I believe in writing clean, maintainable code, designing scalable
-              architectures, and continuously exploring new technologies to
-              enhance user experience and development efficiency.
+              I focus on writing clean, scalable code, improving performance,
+              and shipping production-ready systems that actually create impact
+              — not just demos. Outside coding, I enjoy exploring system design,
+              automation ideas, and improving product usability.
             </p>
 
             <div className="pt-4">
-              <h4 className="text-lg font-semibold mb-3 text-foreground">
-                What I Love Working On
-              </h4>
-              <div className="flex flex-wrap gap-2">
-                {interests.map((interest, index) => (
-                  <motion.span
-                    key={interest}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.05 * index }}
-                    viewport={{ once: true }}
-                    className="px-3 py-1.5 bg-muted/50 text-foreground/90 rounded-full text-xs sm:text-sm font-medium hover:bg-muted transition-colors"
-                  >
-                    {interest}
-                  </motion.span>
-                ))}
+              <motion.h4
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-lg font-semibold mb-6 text-foreground relative inline-block"
+              >
+                <span className="relative z-10">Achievements</span>
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary/20 via-primary/40 to-transparent rounded-full"></span>
+              </motion.h4>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/80 p-5 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 hover:shadow-lg"
+                >
+                  <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-primary/10 blur-2xl transition-all duration-500 group-hover:bg-primary/20"></div>
+                  <div className="relative z-10">
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <Trophy className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h5 className="text-foreground font-semibold">
+                          Best Recruit Award
+                        </h5>
+                        <span className="text-xs text-muted-foreground">
+                          SLK Software • 2024
+                        </span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-foreground/80 mb-3">
+                      Recognized for early high-impact contributions and quickly
+                      taking ownership of core production modules.
+                    </p>
+                    <button
+                      onClick={() =>
+                        handleViewCertificate(
+                          "https://drive.google.com/file/d/1WyJK78XJm0zaGHDqaD0Z8hCnXjOobyDT/view?usp=sharing"
+                        )
+                      }
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-purple-400 hover:text-purple-300 transition-colors group"
+                    >
+                      View Certificate
+                      <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                    </button>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/80 p-5 backdrop-blur-sm transition-all duration-300 hover:border-primary/30 hover:shadow-lg"
+                >
+                  <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-purple-500/10 blur-2xl transition-all duration-500 group-hover:bg-purple-500/20"></div>
+                  <div className="relative z-10">
+                    <div className="mb-4 flex items-center gap-3">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/10 text-purple-400">
+                        <Sparkles className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h5 className="text-foreground font-semibold">
+                          Innovation Award
+                        </h5>
+                        <span className="text-xs text-muted-foreground">
+                          SLK Software • 2025
+                        </span>
+                      </div>
+                    </div>
+                    <p className="text-sm text-foreground/80 mb-3">
+                      Awarded for building internal AI automation workflows that
+                      improved efficiency and reduced manual processes.
+                    </p>
+                    <button
+                      onClick={() =>
+                        handleViewCertificate(
+                          "https://drive.google.com/file/d/1qbw2XB1SAqLQqQM4UL1Jp6J0bUGM6nVV/view?usp=sharing"
+                        )
+                      }
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-purple-400 hover:text-purple-300 transition-colors group"
+                    >
+                      View Certificate
+                      <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                    </button>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>

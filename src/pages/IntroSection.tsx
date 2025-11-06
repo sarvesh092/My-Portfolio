@@ -22,7 +22,7 @@ const IntroSection = () => {
             className="text-left"
           >
             <motion.div
-              className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
+              className="inline-flex items-center gap-2 sm:mb-2 lg:mb-6 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -32,14 +32,14 @@ const IntroSection = () => {
             </motion.div>
 
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground sm:mb-2 lg:mb-6 leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
               Hi, I'm{" "}
               <TypingAnimation
-                className="text-green-500"
+                className="text-orange-500"
                 words={["Sarvesh Kashyap"]}
               />
             </motion.h1>
@@ -125,7 +125,7 @@ const IntroSection = () => {
                     Associate Software Engineer (Full Stack Developer)
                   </p>
                   <p className="text-sm text-muted-foreground">
-                  Oct 2023 - Present
+                    Oct 2023 - Present
                   </p>
                 </div>
               </motion.div>
@@ -195,15 +195,14 @@ const IntroSection = () => {
               </div>
             </motion.div>
           </motion.div>
-
           <motion.div
-            className="relative mt-8 lg:mt-0"
+            className="relative mt-6 lg:mt-0"
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
             <motion.div
-              className="relative w-full aspect-square max-w-sm sm:max-w-md lg:max-w-lg mx-auto"
+              className="relative w-full aspect-square max-w-[280px] sm:max-w-md lg:max-w-lg mx-auto"
               animate={{
                 y: [0, -15, 0],
                 rotate: [0, 1, -1, 0],
@@ -238,88 +237,83 @@ const IntroSection = () => {
                 className="relative bg-card/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-border/50 h-full w-full flex items-center justify-center"
                 whileHover={{
                   scale: 1.02,
-                  boxShadow:
-                    "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                  boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
-                <div className="text-center p-4 sm:p-6">
-                  <motion.div
-                    className="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full bg-primary/10 mx-auto mb-4 sm:mb-6 flex items-center justify-center overflow-hidden border-4 border-primary/20"
-                    animate={{
-                      rotate: [0, 10, -10, 0],
-                      scale: [1, 1.05, 1],
-                    }}
-                    transition={{
-                      rotate: {
-                        duration: 10,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      },
-                      scale: {
-                        duration: 4,
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        ease: "easeInOut",
-                      },
-                    }}
-                  >
-                    <img
-                      src={Myimage}
-                      alt="My Image"
-                      className="h-full w-full object-cover"
-                    />
-                  </motion.div>
-
-                  <motion.h3
-                    className="text-lg sm:text-xl font-semibold mb-2"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                  >
-                    Sarvesh Kashyap
-                  </motion.h3>
-
-                  <motion.p
-                    className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.7 }}
-                  >
-                    Full Stack Developer
-                  </motion.p>
-
-                  <motion.div
-                    className="flex justify-center items-center gap-2"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.8 }}
-                  >
-                    <motion.span
-                      className="inline-block w-3 h-3 rounded-full bg-green-500"
+                <div className="text-center p-4 sm:p-6 w-full">
+                  <div className="flex flex-col items-center">
+                    <motion.div
+                      className="w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-full bg-primary/10 mx-auto mb-3 sm:mb-6 flex items-center justify-center overflow-hidden border-4 border-primary/20"
                       animate={{
-                        scale: [1, 1.2, 1],
-                        boxShadow: [
-                          "0 0 0 0 rgba(74, 222, 128, 0.7)",
-                          "0 0 0 10px rgba(74, 222, 128, 0)",
-                        ],
+                        rotate: [0, 10, -10, 0],
+                        scale: [1, 1.05, 1],
                       }}
                       transition={{
-                        scale: {
-                          duration: 2,
+                        rotate: {
+                          duration: 10,
                           repeat: Infinity,
                           ease: "easeInOut",
                         },
-                        boxShadow: {
-                          duration: 2,
+                        scale: {
+                          duration: 4,
                           repeat: Infinity,
+                          repeatType: "reverse",
+                          ease: "easeInOut",
                         },
                       }}
-                    />
-                    <span className="text-xs sm:text-sm text-muted-foreground">
-                      Open to Work
-                    </span>
-                  </motion.div>
+                    >
+                      <img
+                        src={Myimage}
+                        alt="My Image"
+                        className="h-full w-full object-cover"
+                      />
+                    </motion.div>
+
+                    <motion.h3
+                      className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.6 }}
+                    >
+                      Sarvesh Kashyap
+                    </motion.h3>
+
+                    <motion.p
+                      className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.7 }}
+                    >
+                      Full Stack Developer
+                    </motion.p>
+
+                    <motion.div
+                      className="flex items-center gap-2"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.8 }}
+                    >
+                      <motion.div
+                        className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500"
+                        animate={{
+                          scale: [1, 1.2, 1],
+                          boxShadow: [
+                            "0 0 0 0 rgba(74, 222, 128, 0.7)",
+                            "0 0 0 8px rgba(74, 222, 128, 0)",
+                            "0 0 0 0 rgba(74, 222, 128, 0)",
+                          ],
+                        }}
+                        transition={{
+                          scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                          boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                        }}
+                      />
+                      <span className="text-xs sm:text-sm text-green-500">
+                        Available for opportunities
+                      </span>
+                    </motion.div>
+                  </div>
                 </div>
               </motion.div>
             </motion.div>
@@ -330,7 +324,7 @@ const IntroSection = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:block"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}

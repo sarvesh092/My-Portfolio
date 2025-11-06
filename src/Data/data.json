@@ -74,7 +74,7 @@
     {
       "title": "Associate Software Engineer — Full Stack Developer",
       "company": "SLK Software",
-      "period": "2023 - Present",
+      "period": "October 2023 - Present",
       "location": "Bangalore, India",
       "description": "Developing scalable, AI/ML-driven web applications with a strong focus on performance, automation, and real-time data visualization.",
       "achievements": [
@@ -113,10 +113,9 @@
       "Tailwind CSS",
       "Redux Toolkit",
       "Zustand",
-      "React Query",
+      "TanStack Query",
       "Material UI",
-      "Shadcn",
-      "Figma"
+      "Shadcn"
     ],
     "backend": [
       "Node.js",
@@ -134,7 +133,7 @@
       "Kubernetes",
       "Git",
       "Azure",
-      "Nginx",
+      "AWS Lambda",
       "CI/CD Pipelines",
       "GitHub"
     ]

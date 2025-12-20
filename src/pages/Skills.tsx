@@ -18,7 +18,7 @@ const categories = [
   { id: "backend", name: "Backend", icon: Server },
   { id: "database", name: "Databases & ORM", icon: Database },
   { id: "testing", name: "Testing", icon: Bug },
-  { id: "devops", name: "DevOps & Cloud", icon: Cloud },
+  { id: "devops", name: "DevOps & Tools", icon: Cloud },
 ];
 
 const categoryDescriptions = {
@@ -78,7 +78,7 @@ const Skills = () => {
               viewport={{ once: true, margin: "-50px" }}
               className="bg-card rounded-xl border border-border/50 p-6 hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 rounded-lg bg-primary/10 text-primary">
                   <category.icon className="h-5 w-5" />
                 </div>
@@ -95,15 +95,15 @@ const Skills = () => {
                 }
               </p>
 
-              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 mt-5">
+              <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4 mt-8">
                 {Data.skillsData[category.id]?.map((skill, index) => (
                   <motion.div
                     key={`${category.id}-${skill}`}
                     whileHover={{ scale: 1.05, transition: { duration: 0.1 } }}
                     whileTap={{ scale: 0.98 }}
-                    className="flex flex-col items-center justify-center p-2 rounded-lg hover:bg-muted/20 transition-colors h-full"
+                    className="flex flex-col items-center mb-10 justify-center rounded-lg hover:bg-muted/20 transition-colors h-full"
                   >
-                    <div className="w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center mb-8">
+                    <div className="w-10 h-10 p-2 sm:w-11 sm:h-11 flex items-center justify-center mb-4">
                       <SkillIcons name={skill} index={index} />
                     </div>
                   </motion.div>

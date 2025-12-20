@@ -153,7 +153,7 @@ const IntroSection = () => {
               <Button
                 size="lg"
                 className="gap-2 px-4 sm:px-6 h-10 sm:h-12 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground w-full sm:w-auto"
-                onClick={() => window.open("/Sarvesh_Kashyap.pdf", "_blank")}
+                onClick={() => window.open("/Sarvesh-Kashyap.pdf", "_blank")}
               >
                 <Download className="h-4 w-4" />
                 Download Resume

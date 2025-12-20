@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Code, Database } from "lucide-react";
 import PrismaIcon from "@/assets/icons/prisma.svg?react";
 import NextIcon from "@/assets/icons/next.svg?react";
@@ -28,7 +28,6 @@ import JestIcon from "@/assets/icons/jest-snapshot.svg?react";
 import PostmanIcon from "@/assets/icons/postman.svg?react";
 import GitHubIcon from "@/assets/icons/github.svg?react";
 import DockerIcon from "@/assets/icons/docker.svg?react";
-import KubernetesIcon from "@/assets/icons/kubernetes.svg?react";
 import AwsIcon from "@/assets/icons/aws-lambda.svg?react";
 import TanStackIcon from "@/assets/icons/tanstack.svg?react";
 
@@ -90,7 +89,6 @@ const SkillIcons = ({ name, index }: { name: string; index: number }) => {
 
       // DevOps & Cloud
       Docker: <DockerIcon className="h-10 w-10" />,
-      Kubernetes: <KubernetesIcon className="h-10 w-10" />,
       Azure: <AzureIcon className="h-10 w-10" />,
       Git: <GitIcon className="h-10 w-10" />,
       "AWS Lambda": <AwsIcon className="h-10 w-10" />,
@@ -99,7 +97,7 @@ const SkillIcons = ({ name, index }: { name: string; index: number }) => {
 
       // Testing
       Jest: <JestIcon className="h-10 w-10" />,
-      "React Testing Library": <ReactTestingIcon className="h-10 w-10" />,
+      "React Testing": <ReactTestingIcon className="h-10 w-10" />,
       Postman: <PostmanIcon className="h-10 w-10" />,
       "Chrome DevTools": <DevToolsIcon className="h-10 w-10" />,
     };
@@ -110,39 +108,11 @@ const SkillIcons = ({ name, index }: { name: string; index: number }) => {
   return (
     <motion.div
       key={name}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{
-        y: -5,
-        transition: {
-          type: "spring",
-          stiffness: 400,
-          damping: 10,
-        },
-      }}
-      transition={{
-        delay: index * 0.02,
-        type: "spring",
-        stiffness: 300,
-        damping: 15,
-      }}
       className="group flex flex-col items-center justify-center p-4 text-center"
     >
       <motion.div
         className="mb-2 p-2 rounded-2xl transition-all duration-300
                     bg-primary/5 group-hover:shadow-lg group-hover:shadow-primary/10"
-        whileHover={{
-          scale: 1.15,
-          rotate: [0, -5, 5, -5, 5, 0],
-          transition: {
-            duration: 0.6,
-            rotate: {
-              repeat: 1,
-              duration: 0.6,
-              ease: "easeInOut",
-            },
-          },
-        }}
       >
         {getSkillIcon(name)}
       </motion.div>

@@ -127,10 +127,9 @@
       "Redis Caching"
     ],
     "database": ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM", "Redis"],
-    "testing": ["Jest", "React Testing Library", "Postman", "Chrome DevTools"],
+    "testing": ["Jest", "React Testing", "Postman", "Chrome DevTools"],
     "devops": [
       "Docker",
-      "Kubernetes",
       "Git",
       "Azure",
       "AWS Lambda",

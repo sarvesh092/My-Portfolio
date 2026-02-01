@@ -4,6 +4,8 @@ import TestMyStack from "@/assets/icons/testmystack.png";
 import AiSummary from "@/assets/icons/aisummery.png";
 import SecureFlow from "@/assets/icons/secureflow.png";
 import GithubIcon from "@/assets/icons/github.svg?react";
+import RFP from "@/assets/icons/rfp.png";
+import ExpenseTracker from "@/assets/icons/ExpenseTracker.png";
 import { Button } from "@/components/ui/button";
 import Data from "@/Data/data.json";
 import { AuroraText } from "@/components/ui/aurora-text";
@@ -54,8 +56,12 @@ const Projects = () => {
                       project.title === "TESTMYSTACK"
                         ? TestMyStack
                         : project.title === "SecureFlow"
-                        ? SecureFlow
-                        : AiSummary
+                          ? SecureFlow
+                          : project.title === "AI SUMMARY ANALYZER"
+                            ? AiSummary
+                            : project.title === "AI-RFP MANAGEMENT PLATFORM"
+                              ? RFP
+                              : ExpenseTracker
                     }
                     alt={project.title}
                     className="h-full w-full object-cover object-center transition-all duration-700 group-hover:scale-110"

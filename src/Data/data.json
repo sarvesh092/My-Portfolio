@@ -1,6 +1,30 @@
 {
   "projects": [
     {
+      "title": "AI-RFP MANAGEMENT PLATFORM",
+      "description": "An AI-powered procurement workflow system that converts natural language requirements into structured RFPs, automates vendor communication, parses proposals, and recommends the best vendor using intelligent comparison.",
+      "features": [
+        "Built an end-to-end AI-driven RFP management platform using React, Node.js, Express, and MongoDB to streamline procurement workflows.",
+        "Implemented LLM-based RFP generation that transforms unstructured user requirements into reusable structured procurement documents.",
+        "Added AI-assisted vendor recommendation engine that provides decision reasoning and trade-offs to help managers select the optimal proposal.",
+        "Developed vendor management modules allowing procurement teams to onboard vendors, select recipients, and send RFPs directly via email integration.",
+        "Integrated Nodemailer-based SMTP dispatch to automate real vendor outreach and improve real-world usability of the procurement flow.",
+        "Designed an AI proposal parsing pipeline that extracts key details (pricing, delivery timelines, payment terms, warranty) from messy vendor email responses.",
+        "Created a vendor comparison dashboard with side-by-side proposal evaluation to replace manual spreadsheet-based procurement decisions."
+      ],
+      "techStack": [
+        "React.js",
+        "OpenAI API",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Nodemailer (SMTP)",
+        "Ant Design"
+      ],
+      "github": "https://github.com/sarvesh092/Ai-RFP-management-platform",
+      "Link": "#"
+    },
+    {
       "title": "TESTMYSTACK",
       "description": "An interactive, full-stack quiz platform where users can test their knowledge across multiple tech domains, track progress, and export results.",
       "features": [
@@ -23,6 +47,26 @@
       ],
       "github": "https://github.com/sarvesh092/TestMyStack",
       "Link": "https://test-my-stack.vercel.app/"
+    },
+    {
+      "title": "EXPENSE TRACKER",
+      "description": "A production-focused full-stack Expense Tracker that enables users to log, filter, and analyze expenses with retry-safe APIs, precise money handling, and deterministic sorting.",
+      "features": [
+        "Built a full-stack expense management system using Next.js App Router, TypeScript, and MongoDB with a clean scalable architecture.",
+        "Implemented a retry-safe backend using Idempotency Keys to prevent duplicate expense creation during network retries and repeated submissions.",
+        "Ensured accurate financial calculations by storing monetary values as integer cents instead of floating-point numbers to avoid precision errors.",
+        "Developed robust REST APIs with category-based filtering and consistent date-based sorting for reliable and predictable data retrieval.",
+        "Designed an interactive UI with real-time expense listing, category filters, and dynamic total calculations for better user insights."
+      ],
+      "techStack": [
+        "Next.js",
+        "TypeScript",
+        "MongoDB",
+        "Mongoose",
+        "Tailwind CSS"
+      ],
+      "github": "https://github.com/sarvesh092/Expense-Tracker",
+      "Link": "https://expense-tracker-five-rho-62.vercel.app"
     },
     {
       "title": "AI SUMMARY ANALYZER",
@@ -122,9 +166,10 @@
       "Express.js",
       "RESTful APIs",
       "Microservices",
+      "Flask",
+      "FastAPI",
       "JWT & OAuth",
-      "WebSockets",
-      "Redis Caching"
+      "Redis"
     ],
     "database": ["PostgreSQL", "MySQL", "MongoDB", "Prisma ORM", "Redis"],
     "testing": ["Jest", "React Testing", "Postman", "Chrome DevTools"],
@@ -134,7 +179,8 @@
       "Azure",
       "AWS Lambda",
       "CI/CD Pipelines",
-      "GitHub"
+      "GitHub",
+      "LangChain"
     ]
   }
 }

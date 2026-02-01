@@ -31,7 +31,7 @@ import AwsIcon from "@/assets/icons/aws-lambda.svg?react";
 import TanStackIcon from "@/assets/icons/tanstack.svg?react";
 import Flask from "@/assets/icons/Flask.svg?react";
 import FastAPI from "@/assets/icons/FastAPI.svg?react";
-import LangChain from "@/assets/icons/LangChain.svg?react";
+import LangChain from "@/assets/icons/Langchain.svg?react";
 
 const SkillIcons = ({ name, index }: { name: string; index: number }) => {
   const getSkillIcon = (skillName: string) => {

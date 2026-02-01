@@ -10,7 +10,6 @@ import ReduxIcon from "@/assets/icons/redux.svg?react";
 import MaterialUIIcon from "@/assets/icons/material-ui.svg?react";
 import NodeIcon from "@/assets/icons/node.svg?react";
 import ExpressIcon from "@/assets/icons/express.svg?react";
-import WebSocketsIcon from "@/assets/icons/socketio.svg?react";
 import FigmaIcon from "@/assets/icons/figma.svg?react";
 import MongoDBIcon from "@/assets/icons/mongodb.svg?react";
 import MySqlIcon from "@/assets/icons/mysql.svg?react";
@@ -30,6 +29,9 @@ import GitHubIcon from "@/assets/icons/github.svg?react";
 import DockerIcon from "@/assets/icons/docker.svg?react";
 import AwsIcon from "@/assets/icons/aws-lambda.svg?react";
 import TanStackIcon from "@/assets/icons/tanstack.svg?react";
+import Flask from "@/assets/icons/Flask.svg?react";
+import FastAPI from "@/assets/icons/FastAPI.svg?react";
+import LangChain from "@/assets/icons/LangChain.svg?react";
 
 const SkillIcons = ({ name, index }: { name: string; index: number }) => {
   const getSkillIcon = (skillName: string) => {
@@ -79,9 +81,9 @@ const SkillIcons = ({ name, index }: { name: string; index: number }) => {
           🔑
         </div>
       ),
-      WebSockets: <WebSocketsIcon className="h-10 w-10" />,
-      "Redis Caching": <RedisIcon className="h-10 w-10" />,
       MongoDB: <MongoDBIcon className="h-10 w-10" />,
+      Flask: <Flask className="h-10 w-10" />,
+      FastAPI: <FastAPI className="h-10 w-10" />,
       MySQL: <MySqlIcon className="h-10 w-10" />,
       PostgreSQL: <Database className="h-10 w-10 text-blue-500" />,
       "Prisma ORM": <PrismaIcon className="h-10 w-10" />,
@@ -94,6 +96,7 @@ const SkillIcons = ({ name, index }: { name: string; index: number }) => {
       "AWS Lambda": <AwsIcon className="h-10 w-10" />,
       "CI/CD Pipelines": <CiCdIcon className="h-10 w-10" />,
       GitHub: <GitHubIcon className="h-10 w-10" />,
+      LangChain: <LangChain className="h-10 w-10" />,
 
       // Testing
       Jest: <JestIcon className="h-10 w-10" />,

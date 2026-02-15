@@ -122,7 +122,7 @@ const IntroSection = () => {
                     Currently Working at SLK Software
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    Associate Software Engineer (Full Stack Developer)
+                    Software Engineer (Full Stack Developer)
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Oct 2023 - Present
